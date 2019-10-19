@@ -1,0 +1,40 @@
+{
+  "name": "flow-advanced-lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.109.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.18.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "styled-components": "^4.4.0"
+  }
+}
