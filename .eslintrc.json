@@ -8,7 +8,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:flowtype/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -40,7 +41,8 @@
   },
   "plugins": [
     "react",
-    "import"
+    "import",
+    "flowtype"
   ],
   "rules": {
     "import/no-cycle": 2,

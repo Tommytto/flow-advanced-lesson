@@ -14,15 +14,19 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.6.3",
+    "@userstory/api": "^0.1.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-flowtype": "^4.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.109.0",
+    "flow-typed": "^2.6.2",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.18.2",
     "webpack": "^4.41.2",
@@ -35,6 +39,7 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.4.0"
   }
 }
