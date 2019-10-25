@@ -1,7 +1,7 @@
 // @flow
 import { DELETE_USER, SET_USER_DATA, UPDATE_USER_DATA } from './constants';
-import type { $$ObjectData } from '../../common/types';
 import { typecast } from '../../common/types';
+import { mergeFirstDeep } from '../../common/helpers/redux';
 
 type TUser = {
   name: string,
@@ -11,45 +11,34 @@ type TUser = {
 };
 
 // ID всегда лучше хранить в строках.
-type TUserData = $$ObjectData<TUser>;
+type TUserData = $$MayBeRecord<TUser>;
 
 type TUserReducer = {
-  userData: $Exact<TUserData>
+  userData: TUserData
 };
 
-const initialState = {
+const initialState: TUserReducer = {
   userData: {
     [3]: 3
   }
 };
 
-type TActionSetUserData = {
+export type TActionSetUserData = {
   type: typeof SET_USER_DATA,
   payload: TUserData
 };
 
-type TActionUpdateUserData = {
+export type TActionUpdateUserData = {
   type: typeof UPDATE_USER_DATA,
   payload: TUserData
 };
 
-type TActionDeleteUser = {
+export type TActionDeleteUser = {
   type: typeof DELETE_USER,
   payload: string
 };
 
 type TAction = TActionSetUserData | TActionUpdateUserData | TActionDeleteUser;
-
-function mergeFirstDeep({ oldInfo, newInfo }) {
-  Object.keys(newInfo).reduce((result, id) => {
-    result[id] = {
-      ...oldInfo[id],
-      ...newInfo[id]
-    };
-
-    return result;
-  }, {});
-}
 
 export function userReducer(state: TUserReducer = initialState, action: TAction): TUserReducer {
   switch (action.type) {
